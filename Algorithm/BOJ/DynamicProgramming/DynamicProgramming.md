@@ -10,12 +10,17 @@
     * 작은 문제에서 구한 정답은 그것을 포함하는 큰 문제에서도 동일하다.
 
 
-* 메모이제이션(memoization) 기법 사용
-    * Topdown 방식
+* Memoization 기법 사용
+    * TopDown 방식 (하향식)
     * 연산 한 것을 메모리에 저장해 놓고,   
      다음에 똑같은 결과가 필요한 경우 다시 연산하지 않고 메모리에 저장된 값을 가져와 사용
+     * 재귀함수 사용
 
-* 
+* Tabulation 기법 사용
+    * BottomUp 방식 (상향식)
+    * 하위의 작은 문제부터 천천히 해결하면서 더 큰 문제를 해결
+    * 반복문 사용
+
 ```python
 # 대표적인 예시인 피보나치 수열
 
@@ -30,7 +35,7 @@ def fibo(x):
 
 
 '''
-2. Topdown(memoization)
+2. Topdown
 '''
 memo = [0]*100
 
@@ -40,4 +45,14 @@ def fibo(x):
     memo[x] = fibo(x-1) + fibo(x-2)
     return memo[x]
 
+'''
+3. Bottom-Up 
+'''
+dp = [0]*100
+dp[1] = 1
+dp[2] = 2
+n = 99
+
+for i in range(3, n+1):
+    dp[i] = dp[i-1] + dp[i-2]
 ```
