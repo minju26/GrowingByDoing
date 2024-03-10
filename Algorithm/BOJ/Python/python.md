@@ -9,7 +9,7 @@ input("prompt msg")
 - prompt message를 받지 않은 경우에도 속도 지연에 영향을 미친다.
 
 ```python
-sys.stdin.input()
+sys.stdin.readline()
 ```
 - 문자열 타입으로 입력받는다.
 - 정수/실수/리스트 등으로 사용하는 경우에는 따로 처리를 해줘야 한다.
