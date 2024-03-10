@@ -15,6 +15,11 @@ sys.stdin.readline()
 - 정수/실수/리스트 등으로 사용하는 경우에는 따로 처리를 해줘야 한다.
 - 개행문자 "\n"을 같이 입력받기 때문에 문자열 처리가 필요하다. (rstrip(), strip())
 
+```python
+print(*list)
+```
+- "a, b, c"와 같이 리스트의 원소들만 출력된다.
+- print(list)의 경우 "[a, b, c]"가 출력된다.
 ### 함수
 
 ```python
