@@ -14,7 +14,7 @@ for _ in range(m):
     graph[i].append(j)
     graph[j].append(i)
 
-for i in range(n):
+for i in range(n+1):
     graph[i].sort()
 
 
@@ -50,3 +50,5 @@ bfs(graph, s)
 
 print(*dresult)
 print(*bresult)
+
+# 틀렸습니다 : line 17에서 범위를 n으로 설정해 마지막 정점에 대한 리스트 정렬을 놓침.
