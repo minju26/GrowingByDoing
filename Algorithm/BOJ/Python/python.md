@@ -37,12 +37,12 @@ list.count(x)
 ```python
 list.sort()
 ```
-- 리스트 자체를 정렬하여 원본 리스트가 변경된다.
+- 리스트 자체를 정렬하여 **원본 리스트가 변경**된다.
 
 ```python
 newList = sorted(list)
 ```
-- 기존의 list가 정렬된 새로운 newList가 반환되며 원본 리스트가 변경되지 않는다.
+- 기존의 list가 정렬된 새로운 newList가 반환되며 **원본 리스트가 변경되지 않**는다.
 
 ```python
 items = [(a, b), (c, d), (e, f)]
@@ -60,3 +60,10 @@ items.sort(key = lambda item: item, reverse=True)
 items.sort(key = lambda item: item[1], resverse=True)
 ```
 - lambda 표현식을 사용한 정렬
+
+```pyton
+enumerate(객체, start=0)
+for i, value in enumerate(list)
+```
+- 주로 `for`문과 함께 사용되며, 순서가 있는 자료형(**list, tuple, set, dictionary, string**)에 대하여 **index와 value를 함께 반환**한다. 
+- 중복되는 value가 있는 경우나 시간 시간복잡도 측면에서 `index(value)` 보다 용이함
